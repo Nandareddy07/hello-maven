@@ -31,7 +31,7 @@ pipeline {
             steps { 
                 sh """ 
                 export ANSIBLE_HOST_KEY_CHECKING=False 
-                ansible-playbook -i /var/lib/jenkins/workspace/hello-maven/hosts.ini /var/lib/jenkins/workspace/hello-maven/deploy.yml --extra-vars='ansible_become_pass=exam@123' 
+                ansible-playbook -i /var/lib/jenkins/workspace/hello-maven/hosts.ini /var/lib/jenkins/workspace/hello-maven/deploy.yml  
                 """ 
                 // Enter student password above 
             } 
