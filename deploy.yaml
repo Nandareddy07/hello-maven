@@ -2,6 +2,8 @@
 - name: Deploy Artifact to Localhost
   hosts: localhost
   become: true
+  become_user: nanda_123
+  become_method: su
 
   tasks:
     - name: Copy the artifact to the target location
