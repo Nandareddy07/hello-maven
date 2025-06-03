@@ -2,9 +2,11 @@
 - name: Deploy Artifact to Localhost
   hosts: localhost
   become: true
+  become_user: sai
+  gather_facts: false
 
   tasks:
     - name: Copy the artifact to the target location
       copy:
         src: "/var/lib/jenkins/workspace/hello/target/hello-maven-1.0-SNAPSHOT.jar"
-        dest: "/var/lib/jenkins/workspace/hello/t.jar"
+        dest: "/home/sai/t.jar"
