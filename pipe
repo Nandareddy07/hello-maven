@@ -1,3 +1,7 @@
+sudo visudo
+jenkins ALL=(<user_name>) NOPASSWD:ALL
+
+
 pipeline { 
     agent any 
     
